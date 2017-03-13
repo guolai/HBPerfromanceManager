@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface HBOpenGLView : UIView
-
+- (void)setupContext;
+- (id)initWithFrame:(CGRect)frame;
+- (void)render;
 @end

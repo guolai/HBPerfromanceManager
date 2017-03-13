@@ -10,4 +10,13 @@
 
 @interface HBPerformanceManager : NSObject
 
++ (HBPerformanceManager *)shareInstance;
+
+- (void)startPerformance;
+- (void)stopPerformance;
+//- (void)start;
+//
+//- (void)stop;
+
+- (void)showWarningMessage:(NSString *)warningMessage;
 @end

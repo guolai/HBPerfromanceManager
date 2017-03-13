@@ -7,7 +7,18 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "HBPerformanceMonitor.h"
+#import "HBWeakPairObject.h"
 
 @interface HBGPUPerformanceTracker : NSObject
+@property (nonatomic, weak) id<HBPerformanceMonitorDegegate> delegate;
+
++ (HBGPUPerformanceTracker *)shareInstance;
+
+- (void)start;
+- (void)stop;
+- (void)addVCPairs:(HBWeakPairObject *)vcObject forKey:(NSString *)key;
+- (NSString *)markGPUExhaustedLayer:(NSString *)key;
+
 
 @end
